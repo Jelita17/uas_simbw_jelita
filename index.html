@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TABEL PENYEWAAN IPHONE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tabel Penyewaan iPhone</h1>
+        <p>Pendataan Penyewaan iPhone Periode 2025</p>
+    </header>
+
+    <div class="input">
+        <div class="form-group">
+            <label for="noKTP">No. KTP:</label>
+            <input type="text" id="noKTP" placeholder="Masukkan No. KTP Anda" />
+        </div>
+        <div class="form-group">
+            <label for="namaLengkap">Nama Lengkap:</label>
+            <input type="text" id="namaLengkap" placeholder="Masukkan Nama Lengkap Anda" />
+        </div>
+        <div class="form-group">
+            <label for="jenisKelamin">Jenis Kelamin:</label>
+            <select id="jenisKelamin">
+                <option value="" disabled selected hidden>Pilih Jenis Kelamin</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="usia">Usia:</label>
+            <input type="number" id="usia" placeholder="Masukkan Usia Anda" />
+        </div>
+        <div class="form-group">
+            <label for="jenisIphone">Jenis iPhone Sewaan:</label>
+            <select id="jenisIphone">
+                <option value="" disabled selected hidden>Pilih Jenis iPhone</option>
+                <option value="iPhone 14">iPhone 14</option>
+                <option value="iPhone 13">iPhone 13</option>
+                <option value="iPhone 12">iPhone 12</option>
+                <option value="iPhone 11">iPhone 11</option>
+                <option value="iPhone XR">iPhone XR</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" placeholder="Masukkan Alamat Anda" />
+        </div>
+        <div class="form-group">
+            <label for="tanggalSewa">Tanggal Sewa:</label>
+            <input type="date" id="tanggalSewa" />
+        </div>
+        <div class="form-group">
+            <label for="tanggalPengembalian">Tanggal Pengembalian:</label>
+            <input type="date" id="tanggalPengembalian" />
+        </div>
+        <button id="btnSimpan" onclick="simpanData()">Simpan</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>No. KTP</th>
+                <th>Nama Lengkap</th>
+                <th>Jenis Kelamin</th>
+                <th>Usia</th>
+                <th>Jenis iPhone Sewaan</th>
+                <th>Alamat</th>
+                <th>Tanggal Sewa</th>
+                <th>Tanggal Pengembalian</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="hasil">
+            <!-- Data akan ditampilkan di sini -->
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="alert/sweetalert2.all.min.js"></script>
+</body>
+</html>
